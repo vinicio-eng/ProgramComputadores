@@ -1,0 +1,49 @@
+
+
+int nota = 0;
+int notaa = 0;
+int notab = 0;
+
+int faltas = 0;
+
+Console.WriteLine("Digite seu nome");
+string nome = Console.ReadLine();
+
+Console.WriteLine("Digite sua primeira nota: ");
+string nota1txt = Console.ReadLine();
+if (int.TryParse(nota1txt, out notaa) == false)
+{
+    Console.WriteLine("Valor invalido");
+    return;
+}
+
+Console.WriteLine("Digite sua segunda nota: ");
+string nota2txt = Console.ReadLine();
+if (int.TryParse(nota2txt, out notab) == false)
+{
+    Console.WriteLine("Valor invalido");
+    return;
+}
+
+Console.WriteLine("Digite sua quantidade de faltas: ");
+string faltastxt =  Console.ReadLine();
+bool validarFaltas = int.TryParse(faltastxt, out faltas);
+if (validarFaltas == false)
+{
+    Console.WriteLine("Digite um valor valido");
+    return;
+}
+
+if (faltas <= 20) 
+{
+    Console.WriteLine("");
+    
+}
+
+else 
+{
+    Console.WriteLine("Reprovado por falta");
+}
+
+int soma = notaa + notab;
+int media = soma / 2;
